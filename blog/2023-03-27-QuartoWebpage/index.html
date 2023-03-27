@@ -9,7 +9,7 @@
 <meta name="author" content="Simon R. Steinkamp">
 <meta name="dcterms.date" content="2023-03-27">
 
-<title>srsteinkamp.github.io - Building a Quarto Webpage</title>
+<title>SR Steinkamp - Building a Quarto Webpage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">srsteinkamp.github.io</span>
+    <span class="navbar-title">SR Steinkamp</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -278,9 +278,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="a-new-quarto-webpage" class="level1">
 <h1>A new Quarto Webpage</h1>
-<p>I now changed my whole blog and website workflow over to (Quarto)[https://quarto.org] and so far it’s great and surprisingly easy: I could move my previous website and blog, which resided in two different GitHub repositories - there was a reason! - into one and had everything around set up in a few hours.</p>
-<p>Rather than writing another tutorial on how to set up a website like this, I simply want to thank Samantha Csik who wrote two excellent tutorials on creating a (https://ucsb-meds.github.io/creating-quarto-websites/)[website], and setting up a (https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)[blog].</p>
-<p>Quarto of course has additional important information, e.g., for configuring GitHub Actions for (publishing)[https://quarto.org/docs/publishing/github-pages.html] on GitHub pages.</p>
+<p>I now changed my whole blog and website workflow over to <a href="https://quarto.org">Quarto</a> and so far it’s great and surprisingly easy: I could move my previous website and blog, which resided in two different GitHub repositories - there was a reason! - into one and had everything around set up in a few hours.</p>
+<p>Rather than writing another tutorial on how to set up a website like this, I simply want to thank Samantha Csik who wrote two excellent tutorials on creating a <a href="https://ucsb-meds.github.io/creating-quarto-websites/">website</a>, and setting up a <a href="https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/">blog</a>.</p>
+<p>Quarto of course has additional important information, e.g., for configuring GitHub Actions for <a href="https://quarto.org/docs/publishing/github-pages.html">publishing</a> on GitHub pages.</p>
 <section id="tips-tricks" class="level2">
 <h2 class="anchored" data-anchor-id="tips-tricks">Tips &amp; Tricks</h2>
 <p>I still might find a few additional tips and tricks, which I will try to write down.</p>
@@ -296,6 +296,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max-items</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid-columns</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid-item-align</span><span class="kw">:</span><span class="at"> center</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-github-actions-quarto-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="using-github-actions-quarto-tutorial">Using GitHub Actions (Quarto tutorial)</h3>
+<p>Just for people who are as confused as me - if you use the GitHub Actions workflow detailed in the Quarto <a href="https://quarto.org/docs/publishing/github-pages.html">tutorial</a>, make sure that your GitHub pages uses <code>Deploy from a branch</code> as a source, using the <code>root</code> directory of <code>gh-pages</code> - and not GitHub actions :)</p>
 
 
 </section>
