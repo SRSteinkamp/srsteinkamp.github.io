@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Data Analytics Capstone"
+author: Simon R. Steinkamp
+date: 2021-05-21
+categories: [R]
+---
+
+Somewhere between defending my doctorate and looking for a job, I found myself doing the
+Google Analytics Capstone on Coursera which provided nice insights into data analytics and the thinking behind it. But unfortunately for me the technical level was very basic (beginner friendly) so that I did not learn many things I had hoped for.
+
+Anyways, here is the URL to the capstone project, where I selected the provided idea of creating a report for bike-sharing data.
+
+[Report](cert_capstone.html)
+
+The whole repro can be found [here](https://github.com/SRSteinkamp/rideshare_analystcert).

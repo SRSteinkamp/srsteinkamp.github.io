@@ -1,0 +1,12 @@
+---
+title: "Conference on Cognitive Computational Neuroscience 2022"
+---
+
+See here our poster presented at CCN 2022 during Poster Session 2, the manuscript can be found [here](https://2022.ccneuro.org/view_paper.php?PaperNum=1124).
+
+
+<object data="/www/Steinkamp_CCN_2022_wide.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/www/Steinkamp_CCN_2022_wide.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_CCN_2022_wide.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
