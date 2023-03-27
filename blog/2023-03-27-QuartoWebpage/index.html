@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Simon R. Steinkamp">
-<meta name="dcterms.date" content="2021-03-19">
+<meta name="dcterms.date" content="2023-03-27">
 
-<title>srsteinkamp.github.io - A Covid-19 Dashboard (for Denmark) using Dash and Plotly</title>
+<title>srsteinkamp.github.io - Building a Quarto Webpage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -113,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</h1>
+      <h1 class="quarto-secondary-nav-title">Building a Quarto Webpage</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -124,11 +187,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</h1>
+      <h1 class="title d-none d-lg-block">Building a Quarto Webpage</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Python</div>
-                <div class="quarto-category">Plotly</div>
-                <div class="quarto-category">Dash</div>
+                <div class="quarto-category">Meta</div>
               </div>
                   </div>
   </div>
@@ -146,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 19, 2021</p>
+        <p class="date">March 27, 2023</p>
       </div>
     </div>
     
@@ -174,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link active">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</a>
+  <a href="../../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -184,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2023-03-27-QuartoWebpage/index.html" class="sidebar-item-text sidebar-link">Building a Quarto Webpage</a>
+  <a href="../../blog/2023-03-27-QuartoWebpage/index.html" class="sidebar-item-text sidebar-link active">Building a Quarto Webpage</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -215,37 +276,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>The website presented here is currently not working - statsbank changed the API and I think my heroku has expired…</strong></p>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
-<p>I created a small dashboard for COVID-19 cases in Denmark, deployed on <a href="https://dashboard.heroku.com/">heroku</a>.</p>
-<p>Which you can see <a href="https://dk-covid19-dash.herokuapp.com/"><strong>here</strong></a></p>
-</section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>To motivate myself to learn a few new skills which might come handy in future jobs, I got a few courses on udemy as a general guidance and more structured approach to get into new topics.</p>
-<p>One of the courses was on designing interactive dashboards in Pythons using <code>plotly</code> and <code>dash</code>. As a code-along capstone they showed how to develop a dashboard for the stock-market. Now, I could not easily get the data I wanted through <code>pandas-datareader</code>, as many of the APIs now require a registration or are paid.</p>
-</section>
-<section id="the-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>As I was anyways up for a bit more of a challenge and recently moved to Denmark and was digging regularly digging through COVID-19 Dashboards (like the one at <a href="https://www.zeit.de/wissen/gesundheit/corona-zahlen-deutschland-neuinfektionen-inzidenz-aktuelle-karte">zeit.de</a>), I gave myself a try.</p>
-<p>Fortunately, Denmark provides regularly updated data on COVID-19 (and many many other topics) at <a href="statbank.dk">statbank.dk</a> all accessible via a POST API.</p>
-<p>While the data was easy accessible and could be directly read into pandas as a <code>.csv</code>, it actually had internally some interesting challenges. For example, querying dates that were not present in the database led to errors, so that I had to retrieve meta-data about the database before creating queries, so that I could filter data beforehand.</p>
-</section>
-<section id="the-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="the-dashboard">The Dashboard</h2>
-<p>The Dashboard itself is a basic line-plot (or a collection of line-plots). To keep the traffic as low as possible, I decided, to leave the <code>update</code> button from the code-along capstone next to the date-range picker and the selection of communes in Denmark. In fact, clicking update requests the data and downloads it into the <code>html</code> file.</p>
-<p>I here decided to store the data as an invisible <code>json</code> in the page itself, which was provided as a possible solution in the <a href="https://dash.plotly.com/sharing-data-between-callbacks">dash-documentation</a>.</p>
-<p>This ways the updates to the plot using the radio-buttons does not need to download new data and can do the computations, without constantly querying the database.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="covid_dash.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Dashboard overview.</figcaption><p></p>
-</figure>
-</div>
-<p>To see the dashboards source code please visit: <a href="https://github.com/SRSteinkamp/DK_Covid19_Dash">https://github.com/SRSteinkamp/DK_Covid19_Dash</a></p>
+<section id="a-new-quarto-webpage" class="level1">
+<h1>A new Quarto Webpage</h1>
+<p>I now changed my whole blog and website workflow over to (Quarto)[https://quarto.org] and so far it’s great and surprisingly easy: I could move my previous website and blog, which resided in two different GitHub repositories - there was a reason! - into one and had everything around set up in a few hours.</p>
+<p>Rather than writing another tutorial on how to set up a website like this, I simply want to thank Samantha Csik who wrote two excellent tutorials on creating a (https://ucsb-meds.github.io/creating-quarto-websites/)[website], and setting up a (https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)[blog].</p>
+<p>Quarto of course has additional important information, e.g., for configuring GitHub Actions for (publishing)[https://quarto.org/docs/publishing/github-pages.html] on GitHub pages.</p>
+<section id="tips-tricks" class="level2">
+<h2 class="anchored" data-anchor-id="tips-tricks">Tips &amp; Tricks</h2>
+<p>I still might find a few additional tips and tricks, which I will try to write down.</p>
+<section id="listings-on-index" class="level3">
+<h3 class="anchored" data-anchor-id="listings-on-index">Listings on Index</h3>
+<p>Similar to setting up a listings page for the blog part of the website, it is also possible to highlight single items on other sites of the webpage.</p>
+<p>Here, for example, I am adding the most recent blog post to my index page, by adding the snippet below to the header.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">listing</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> blog</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> grid</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date desc"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max-items</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid-columns</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid-item-align</span><span class="kw">:</span><span class="at"> center</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
