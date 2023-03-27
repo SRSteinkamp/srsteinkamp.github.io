@@ -6,17 +6,25 @@ about:
     image-shape: rounded
     image-width: 15em
     links:
-      - text: LinkedIn
+      - icon: linkedin
         href: https://www.linkedin.com/in/simon-steinkamp-785774181/
-      - text: Twitter
+      - icon: twitter
         href: https://twitter.com/simon_steinkamp
-      - text: Mastodon
+      - icon: mastodon
         href: https://vis.social/@dist_simon
-      - text: GitHub
-        href: https://drcmr.dk
-      - text: GoogleScholar
+      - icon: google
         href: https://scholar.google.com/citations?hl=en&user=ssJ29JEAAAAJ
+      - icon: github
+        href: https://github.com/srsteinkamp
 sidebar: false
+listing:
+    contents: blog # all Quarto docs in the `posts` directory will be included on your listing page
+    type: grid # or `default` or `table`; each type has its own set of yaml options to include
+    sort: "date desc" # can also sort on more than one field
+    categories: false # allows you to sort posts by assigned categories
+    max-items: 1
+    grid-columns: 1
+    grid-item-align: center
 ---
 
 ***Construction warning:*** *I previously used a mixture of academic pages and nbpages for my blog and
