@@ -4,16 +4,18 @@ image: images/profile.png
 about:
     template: solana
     image-shape: rounded
-    image-width: 10em
+    image-width: 15em
     links:
       - text: LinkedIn
-        href: https://drcmr.dk
+        href: https://www.linkedin.com/in/simon-steinkamp-785774181/
       - text: Twitter
-        href: https://drcmr.dk
+        href: https://twitter.com/simon_steinkamp
       - text: Mastodon
-        href: https://drcmr.dk
+        href: https://vis.social/@dist_simon
       - text: GitHub
         href: https://drcmr.dk
+      - text: GoogleScholar
+        href: https://scholar.google.com/citations?hl=en&user=ssJ29JEAAAAJ
 sidebar: false
 ---
 
