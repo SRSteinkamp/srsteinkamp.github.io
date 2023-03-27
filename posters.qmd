@@ -1,0 +1,8 @@
+---
+title: "Posters"
+---
+
+## Conference on Cognitive Computational Neuroscience
+
+In this [poster](/posters/2022-08-25-CCN.qmd), we present our first examples of Computational Parametric Mapping.
+

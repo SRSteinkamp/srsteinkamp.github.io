@@ -1,7 +1,48 @@
 ---
-title: "srsteinkamp.github.io"
+title: "Simon R. Steinkamp"
+image: images/profile.png
+about:
+    template: solana
+    image-shape: rounded
+    image-width: 10em
+    links:
+      - text: LinkedIn
+        href: https://drcmr.dk
+      - text: Twitter
+        href: https://drcmr.dk
+      - text: Mastodon
+        href: https://drcmr.dk
+      - text: GitHub
+        href: https://drcmr.dk
+sidebar: false
 ---
 
-This is a Quarto website.
+*Construction warning:* I previously used a mixture of academic pages and nbpages for my blog and
+the other content - currently migrating to a single Quarto page - a few things might
+break or change.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Welcome
+
+You are now on my landing page. From here you can go further to my blog / collection and other of my projects. In the navbar on top you can find my attempts at blogging, publications, CV (soon), and other
+things I produced in the last years.
+
+
+## Projects
+
+Here are a few projects of mine I want to highlight, please see their respective GitHub pages.
+
+
+### pymtrf
+
+My first "full-blown" project. For a presentation I decided to translate the MTRF-toolbox for Matlab to Python and unleash the fullstack of continuous integration and testing suits on it.
+
+[Link to the Github Repro](https://github.com/SRSteinkamp/pymtrf)
+
+### Maskbinarizer
+
+Currently I am using nbdev for developing, especially due to the easy creation of documentations.
+This is a very basic command line tool, to binarize NIFTI files: The last time I checked mricron outputs brain masks in RGB, while a popular lesion symptom mapping tool expects binary images.
+
+[Link to Docs](https://srsteinkamp.github.io/simons_mask_binarizer/)
+
+[Link to Repro](https://github.com/SRSteinkamp/simons_mask_binarizer)

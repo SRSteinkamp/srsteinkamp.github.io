@@ -1,19 +1,50 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "srsteinkamp.github.io"
   navbar:
+    search: false
+    #tools:
+    #  - icon: twitter
+    #    href: https://twitter.com
+    #  - icon: github
+    #    hrrf: https://github.com
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - text: Blog
+        href: blog.qmd
+      - publications.qmd
+      - text: Posters
+        href: posters.qmd
+
+  page-footer:
+    left: "Copyright 2023, Simon R. Steinkamp"
+    right:
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com/
+
+  sidebar:
+    - title: "Blog"
+      style: "docked"
+      contents: blog
+
+    - title: "Posters"
+      style: "docked"
+      contents: posters
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: materia
+      dark: darkly
     css: styles.css
-    toc: true
 
-
+execute:
+  freeze: auto
 

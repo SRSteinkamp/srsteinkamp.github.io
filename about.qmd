@@ -1,5 +1,13 @@
 ---
 title: "About"
+sidebar: false
 ---
 
-About this site
+Since August 2021 I am a Postdoc in the [Computational Neuroscience of Reward](https://www.drcmr.dk/reward-group) group at the Danish Research Center for Magnetic Resonance ([DRCMR](https://www.drcmr.dk/)), where we are investigating whether and how the principles of Ergodicity Economics (it's fascinating, check it out: [https://ergodicityeconomics.com/](https://ergodicityeconomics.com/)) apply to human decision-making.
+
+The project is not only behavioral, as we are also investigating, whether these principles can be found in the reinforcement error signals in the human reward system (e.g., in ensembles of dopamine neurons). In doing this, we
+developed a new method for mapping parameters of computational models onto single voxels (see the [poster](/posters/2022-08-25-CCN.qmd)).
+
+My doctorate research was on the computational modeling of visual attention, most of it using neuroimaging (fMRI) in combination with dynamic causal modeling (DCM). During my masters I also used electrophysiological measures (EEG) for speech recovery, in combination with fMRI recordings.
+
+During my master's degree I also started developing and coding in Python, Matlab, and R and started out on Kaggle, as well as different scientific hackathons on neuroimaging and climate change.
