@@ -8,18 +8,18 @@ categories: [Meta]
 
 # A new Quarto Webpage
 
-I now changed my whole blog and website workflow over to (Quarto)[https://quarto.org] and
+I now changed my whole blog and website workflow over to [Quarto](https://quarto.org) and
 so far it's great and surprisingly easy: I could move my previous website and blog,
 which resided in two different GitHub repositories - there was a reason! - into
 one and had everything around set up in a few hours.
 
 Rather than writing another tutorial on how to set up a website like this, I
 simply want to thank Samantha Csik who wrote two excellent tutorials
-on creating a (https://ucsb-meds.github.io/creating-quarto-websites/)[website],
-and setting up a (https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)[blog].
+on creating a [website](https://ucsb-meds.github.io/creating-quarto-websites/),
+and setting up a [blog](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/).
 
 Quarto of course has additional important information, e.g., for configuring
-GitHub Actions for (publishing)[https://quarto.org/docs/publishing/github-pages.html]
+GitHub Actions for [publishing](https://quarto.org/docs/publishing/github-pages.html)
 on GitHub pages.
 
 ## Tips & Tricks
@@ -46,3 +46,9 @@ listing:
     grid-item-align: center
 ```
 
+### Using GitHub Actions (Quarto tutorial)
+
+Just for people who are as confused as me - if you use the GitHub Actions workflow
+detailed in the Quarto [tutorial](https://quarto.org/docs/publishing/github-pages.html),
+make sure that your GitHub pages uses `Deploy from a branch` as a source, using
+the `root` directory of `gh-pages` - and not GitHub actions :)
