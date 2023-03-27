@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.290">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Simon R. Steinkamp">
+<meta name="dcterms.date" content="2020-04-30">
+<meta name="description" content="Reaction time analysis, using an Exgaus.">
+
+<title>srsteinkamp.github.io - Reaction Time Analysis: The exponential Gaussian</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">srsteinkamp.github.io</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posters.html" rel="" target="">
+ <span class="menu-text">Posters</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../blog/2020-04-28-Pandas-GroupBy-NaN.html">Blog</a></li><li class="breadcrumb-item"><a href="../../blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html">Reaction Time Analysis: The exponential Gaussian</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Reaction Time Analysis: The exponential Gaussian</h1>
+                  <div>
+        <div class="description">
+          Reaction time analysis, using an Exgaus.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Reaction Times</div>
+                <div class="quarto-category">Modeling</div>
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Simon R. Steinkamp </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 30, 2020</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Blog</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2020-04-28-Pandas-GroupBy-NaN.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Pandas suprise - NaNs and with groupby</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2020-07-03-The-30th-Place-Solution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30th place solution in Kaggle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2020-04-03-HIDA-datathon/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HIDA-Datathon in April</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Reaction Time Analysis: The exponential Gaussian</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/2021-05-21-Analytics-Capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Analytics Capstone</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-not-so-easy-task-of-analyzing-reaction-times." id="toc-the-not-so-easy-task-of-analyzing-reaction-times." class="nav-link active" data-scroll-target="#the-not-so-easy-task-of-analyzing-reaction-times.">The (not so) easy task of analyzing reaction times.</a></li>
+  <li><a href="#part-1---how-many-trials-do-i-need-to-fit-an-ex-gauss" id="toc-part-1---how-many-trials-do-i-need-to-fit-an-ex-gauss" class="nav-link" data-scroll-target="#part-1---how-many-trials-do-i-need-to-fit-an-ex-gauss">Part 1 - How many trials do I need to fit an Ex-Gauss?</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#interactive-version-legend" id="toc-interactive-version-legend" class="nav-link" data-scroll-target="#interactive-version-legend">Interactive Version Legend</a></li>
+  </ul></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
+  <ul class="collapse">
+  <li><a href="#statistical-summary" id="toc-statistical-summary" class="nav-link" data-scroll-target="#statistical-summary">Statistical Summary</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#type-1-error-due-to-imbalanced-sample-sizes" id="toc-type-1-error-due-to-imbalanced-sample-sizes" class="nav-link" data-scroll-target="#type-1-error-due-to-imbalanced-sample-sizes">Type 1 error due to imbalanced sample sizes</a></li>
+  <li><a href="#conclusions-not-related-to-analysis" id="toc-conclusions-not-related-to-analysis" class="nav-link" data-scroll-target="#conclusions-not-related-to-analysis">Conclusions not related to analysis</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="the-not-so-easy-task-of-analyzing-reaction-times." class="level2">
+<h2 class="anchored" data-anchor-id="the-not-so-easy-task-of-analyzing-reaction-times.">The (not so) easy task of analyzing reaction times.</h2>
+<p><strong>This is the non-interactive Version of the analysis!</strong> You can find the interactive notebook <a href="Reaction-Time-Ex-Gauss-I.html">here</a>, <strong>caution</strong> it’s about 7MB in size, so not your average website!</p>
+<p>All code can be found in rmarkdown documents on Github <a href="https://github.com/SRSteinkamp/ReactionTimeWrangling/exgauss/">https://github.com/SRSteinkamp/ReactionTimeWrangling/exgauss</a></p>
+<p>Analyzing reaction times has a long history in psychology and (cognitive) neuroscience. Most people who studied Psychology in university have conducted classical psychological experiments. For example investigating the <a href="https://en.wikipedia.org/wiki/Stroop_effect">Stroop task</a>. You might have encountered the stimuli, with the typical task to spell out loud as fast as possible written color names:</p>
+<ul>
+<li><span class="math inline">\(\\color{red}{\\text{RED}}\)</span></li>
+<li><span class="math inline">\(\\color{yellow}{\\text{BLUE}}\)</span></li>
+<li><span class="math inline">\(\\color{blue}{\\text{YELLOW}}\)</span></li>
+<li><span class="math inline">\(\\color{green}{\\text{GREEN}}\)</span></li>
+</ul>
+<p>After running such a task, with many more word-color pairs and different participants, a typical question in undergrad might be: Are participants significantly faster while reading matching color words (<span class="math inline">\(\\color{green}{\\text{GREEN}}\)</span>) than reading non-matching color words (<span class="math inline">\(\\color{blue}{\\text{GREEN}}\)</span>)? A straightforward answer would be to average the reaction times in the non-matching and matching conditions for each participant and then compare the two conditions using for example a <a href="https://en.wikipedia.org/wiki/Student%27s_t-test#Paired_samples">paired t-test</a>. Yes, if <em>p</em> &lt; 0.05 and no, if <em>p</em> &gt; 0.05.</p>
+<p>Results are in and everything is fine? If you start wondering whether this is the <em>correct</em> way of analysis, you might find more and more and <strong>is more</strong>. Different discussions about:</p>
+<ul>
+<li>Should conditions across participants be averaged using the mean or the median?</li>
+<li>Should data be averaged at all?</li>
+<li>How to define outliers?</li>
+<li>…</li>
+<li>Could a drift-diffusion model provide the key insights?</li>
+<li>…</li>
+<li>Is null hypothesis significance testing meaningful?</li>
+</ul>
+<p>All of these questions are not really in my main field of expertise (no worries I won’t deal with the last one ;) , but I found reading about reaction time analyses weirdly entertaining and very interesting, and I wanted to start with blogging. So here is the first one of a couple of experiments I am planning to do. There is no particular order but all are based on some questions that arose while looking at different papers.</p>
+<p>So maybe there is something useful here for you, or not. Or you disagree or have comments, suggestions, etc. please get in touch!</p>
+<p>Here is the first part:</p>
+</section>
+<section id="part-1---how-many-trials-do-i-need-to-fit-an-ex-gauss" class="level2">
+<h2 class="anchored" data-anchor-id="part-1---how-many-trials-do-i-need-to-fit-an-ex-gauss">Part 1 - How many trials do I need to fit an Ex-Gauss?</h2>
+<p>Data below is generated sampling 100000 observations from two Ex-Gaussian distributions with <em>μ</em> = 300, <em>σ</em> = 20, <em>τ</em> = 300 (red) and <em>μ</em> = 500, <em>σ</em> = 50, <em>τ</em> = 100. Note, that both distributions have the same mean of 600 (the black dashed line). To the left the two components of the Ex-Gaussian are presented - the Gaussian and the Exponential distributions. Here again the dashed-lines describe the mean of the corresponding distributions. <img src="unnamed-chunk-2-1.png" class="quarto-discovered-preview-image img-fluid"></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Exponentially_modified_Gaussian_distribution"><strong>Ex</strong>(ponential) <strong>Gauss</strong>(ian) distribution</a>, is the sum of a Gaussian distribution parametrized by <em>μ</em>, and <em>σ</em>, which define the “body” of the distribution, with an Exponential function (<em>τ</em>) describing the skew to the right. The normally distributed body, with a long tail, has been found to closely match the distribution of reaction time data found in many experiments (Palmer et al.&nbsp;2011). While the fit to experimental data seems to be ideal, the parameters itself do not seem to be related to any specific cognitive constructs. At least, the discussion is still ongoing (Spieler, Balota, and Faust 2000). The strength of fitting distributions to reaction times is seen in the ability to provide a finer description than for example a summary of a certain condition using the mean or the median. Different combinations of the Ex-Gauss parameters <em>μ</em> and <em>τ</em>, for example can lead to the same mean. So comparing two conditions for example might provide the same summary statistics, but the distributions might have a very different spread and skew.</p>
+<p>If you are interested in checking out more distributions (and more about model fitting, etc.) visit this great page: <a href="https://lindeloev.github.io/shiny-rt/" class="uri">https://lindeloev.github.io/shiny-rt/</a></p>
+<p>This is just a quick introduction into why fitting a distribution might provide a better picture of reaction times, but how many trials are necessary per condition?</p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>To simulate data I used the 12 Ex-Gauss distributions used by Miller (1988), and many others. My assumption is, that a researcher wants to fit an Ex-Gauss function for each condition and each participant in an experiment. Note that, there are ways to estimate distributions across multiple participants, which seem to be stable, even for small numbers of trials(Ratcliff 1979), which I am not (yet?) going into. One estimate is that around 100 trials might be needed to get reliable results (Ratcliff 1979).</p>
+<p>Here I want to investigate how many trials are needed, and whether there are general biases in the estimation. For most of the analysis I am using the <code>retimes</code> package. Data is simulated using <code>rexgauss</code> and for model fitting using both the method of moments (<code>mexgauss</code>) and maximum likelihood estimation (MLE) <code>timefit</code> are used. According to the documentation <code>timefit</code> gets its starting parameters using the method of moments.</p>
+<p>I am simulating data from the 12 distributions starting with 10 (maybe a rare-condition, like an oddball), up to 500 trials (a Psychophysicist’s dream (Palmer et al.&nbsp;2011)). For each of the twelve distributions I sampled different numbers of trials (10, 20, 35, 50, 100, 200, 350, 500) and then estimated the three parameters <em>μ</em>, <em>σ</em>, <em>τ</em> using the method of moments and MLE. This process was repeated 10000 times.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Distribution</th>
+<th style="text-align: right;">Mu</th>
+<th style="text-align: right;">Sigma</th>
+<th style="text-align: right;">Tau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">550</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">550</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">50</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>The histograms below describe our simulation results. Feel free to click around (in the interactive version) and select different distributions and methods. From our visual inspection we can see that using a small number of trials can lead to quite some biases in the estimated parameters. The spread of estimated parameters decreases the more samples are considered. The data in the histograms is filtered to only include parameter estimates greater than 0 and less than 750. The histograms are calculated so that 40 bins for each sample are estimated and only for sample sizes of 20, 100, 500). This might not be the best way to display the data, but was done to keep the size of the HTML as small as possible. Furthermore, some data cleaning had to be performed as there are raw-events with very unlikely parameter estimates. In the non-interactive version, there estimates for distribution 6 only, however you can see <code>Moments</code> and <code>MLE</code> side by side.</p>
+<section id="interactive-version-legend" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-version-legend">Interactive Version Legend</h3>
+<p>I couldn’t figure out how to put meaningful legends on the interactive version: * red estimates for <em>μ</em>, solid bars distribution <em>μ</em> * blue estimates for <em>τ</em>, dotted bars distribution <em>τ</em> * green estimates for <em>σ</em>, dashed bars distribution <em>σ</em> <img src="unnamed-chunk-6-1.png" class="img-fluid"> To get an estimate of how well (or bad) the modeling performed, I calculated the <strong>mean</strong> error to investigate general trends, its standard-deviation (<strong>SD</strong>), and the mean absolute error for error estimation (<strong>MAE</strong>).</p>
+<p>There is unfortunately, too much data to have good look at, so here is a <code>datatable</code> to play around with and investigate some of the summary values (in the interactive version only). Data can be created using the <code>.Rmd</code> files in the <a href="https://github.com/SRSteinkamp/ReactionTimeWrangling/tree/master/exgauss">Repro</a></p>
+</section>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>Plotting the summaries for the estimations and pooling over distributions, we can draw first (maybe obvious) conclusions:</p>
+<ul>
+<li>larger sample sizes, lead to less error</li>
+<li>maximum likelihood estimation performs generally better, than the method of moments.</li>
+</ul>
+<p>Interestingly, regardless of estimation procedure, the <em>σ</em> and <em>μ</em> parameters seem to be overestimated, whereas <em>τ</em> is underestimated.</p>
+<p><img src="unnamed-chunk-9-1.png" class="img-fluid"></p>
+<section id="statistical-summary" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-summary">Statistical Summary</h3>
+<section id="how-strong-are-the-observed-biases" class="level4">
+<h4 class="anchored" data-anchor-id="how-strong-are-the-observed-biases">How strong are the observed biases?</h4>
+<p><img src="tm0.png" class="img-fluid"> As we have already seen in the figure, we confirm that <em>μ</em> is generally overestimated while, <em>τ</em> is underestimated. This makes sense given the distribution of the data: The majority of data will be sampled from the Gaussian part of the distribution, so extreme-values are relatively rare. It is therefore much harder to correctly estimate the skew (<em>τ</em>). As the mean of the Ex-Gaussian is given by <em>μ</em> + <em>τ</em>, a underestimation of <em>τ</em> automatically leads to a larger estimate of <em>μ</em>.</p>
+<p>Also, the method of moments seems to be more prone to biases, especially leading to an overestimation of <em>σ</em>.</p>
+</section>
+<section id="what-can-we-learn-about-the-error" class="level4">
+<h4 class="anchored" data-anchor-id="what-can-we-learn-about-the-error">What can we learn about the error?</h4>
+<p><img src="tm123.png" class="img-fluid"></p>
+<p>All factors which were included in the model appear to have some meaning (are significant). As we have seen in the other analysis, the method of moments has a higher base MAE rate than the maximum likelihood estimation. Furthermore, we can see that <em>μ</em> and <em>τ</em> are easier identifiable the farther they are apart, especially when the method of moments is used. This is expressed by the regressor diff_mt = <em>μ</em> − <em>τ</em> (based on the original distributions). And again: larger sample sizes are the key factor to reduce the error!</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>If you want to get a good estimate of the reaction time distribution: <strong>collect enough data!</strong></p>
+<p>To provide a bit more nuance, you can get away with small sample sizes, if you are lucky. For example if the reaction time distribution isn’t very skewed. But keep in mind, that you can expect a higher error in the estimation of the true parameters (especially using the method of moments), when <em>τ</em> and <em>μ</em> are close to each other. Looking at the histograms, we also see that there is a lot of variance in the estimation of <em>σ</em>. So further analyzing <em>σ</em>, for example in a group analysis, should be done very carefully. Last but not least, sample sizes should be equal when comparing <em>μ</em> and <em>τ</em> across different conditions! Even if parameters are drawn from the same Ex-Gauss distribution, it is very likely that the condition with fewer trials will have a higher estimate of these parameters. We can do a small simulation of this using our simulated data.</p>
+<section id="type-1-error-due-to-imbalanced-sample-sizes" class="level3">
+<h3 class="anchored" data-anchor-id="type-1-error-due-to-imbalanced-sample-sizes">Type 1 error due to imbalanced sample sizes</h3>
+<p>For simplicity, I decided to only use samples from distribution 6 (with <em>μ</em> = 400, <em>τ</em> = 200, and <em>σ</em> = 50), estimated by MLE. I am drawing 30 random sets of estimated parameters for different combinations of sample sizes. The number 30 is quite arbitrary but is supposed to reflect a typical number of participants in a reaction time experiment. The parameters of the different distributions are then submitted to a paired two-sided t-test and the number of significant results (<em>p</em> &lt; 0.05) are reported. In theory, as data is drawn from the same distribution, we should expect around 5% false positive results.</p>
+<p>Histogram of the simulation results. We can see that the first two pairs have many false positives (<em>p</em> &lt; 0.05, left of the black line). The later pairings on the other hand seem to have a rather uniform distribution of p-values (as we would expect). The pairings (e.g., 20 : 50) show on how many trials the parameters in condition 1 (20) and in condition 2 (50) were estimated. The paired t-tests were then calculated as condition 1 &gt; condition 2. <img src="unnamed-chunk-14-1.png" class="img-fluid"></p>
+<p>For completeness’ sake, I also calculated the average t-value for each of the pairing, next to the proportion of false positive results.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pairing</th>
+<th style="text-align: right;">Mu_p</th>
+<th style="text-align: right;">Mu_t</th>
+<th style="text-align: right;">Tau_p</th>
+<th style="text-align: right;">Tau_t</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1 - 20 : 50</td>
+<td style="text-align: right;">0.248</td>
+<td style="text-align: right;">1.406</td>
+<td style="text-align: right;">0.166</td>
+<td style="text-align: right;">-1.065</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2 - 20 : 200</td>
+<td style="text-align: right;">0.378</td>
+<td style="text-align: right;">1.762</td>
+<td style="text-align: right;">0.256</td>
+<td style="text-align: right;">-1.407</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3 - 50 : 100</td>
+<td style="text-align: right;">0.053</td>
+<td style="text-align: right;">0.289</td>
+<td style="text-align: right;">0.057</td>
+<td style="text-align: right;">-0.293</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4 - 50 : 200</td>
+<td style="text-align: right;">0.060</td>
+<td style="text-align: right;">0.434</td>
+<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">-0.408</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5 - 100 : 200</td>
+<td style="text-align: right;">0.049</td>
+<td style="text-align: right;">0.142</td>
+<td style="text-align: right;">0.056</td>
+<td style="text-align: right;">-0.092</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6 - 200 : 200</td>
+<td style="text-align: right;">0.050</td>
+<td style="text-align: right;">-0.009</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">0.005</td>
+</tr>
+</tbody>
+</table>
+<p>As assumed, we have an inflation of false-positive t-tests when comparing estimates of Ex-Gauss parameters from the same distribution (but estimated using different sample-sizes). The larger the imbalance, the larger the false positive rate!</p>
+</section>
+<section id="conclusions-not-related-to-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="conclusions-not-related-to-analysis">Conclusions not related to analysis</h3>
+<p>This is the first larger project I conducted in R(markdown). I really don’t like the basic R syntax in many regards, but using <code>dplyr</code> and the rest of the <code>tidyverse</code> is great :) <code>%&gt;%</code> it all the way! Building interactive figures with <code>ggplot2</code> + <code>plotly</code> + <code>crosstalk</code> is also quite amazing. But as I did not want to create a shiny app, figuring out how to deal with exploding sizes of .html files took me quite some time.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Miller, Jeff. 1988. “A Warning About Median Reaction Time.” <em>Journal of Experimental Psychology: Human Perception and Performance</em> 14 (3): 539–43. <a href="https://doi.org/10.1037/0096-1523.14.3.539" class="uri">https://doi.org/10.1037/0096-1523.14.3.539</a>.</p>
+<p>Palmer, Evan M., Todd S. Horowitz, Antonio Torralba, and Jeremy M. Wolfe. 2011. “What Are the Shapes of Response Time Distributions in Visual Search?” <em>Journal of Experimental Psychology: Human Perception and Performance</em> 37 (1): 58–71. <a href="https://doi.org/10.1037/a0020747" class="uri">https://doi.org/10.1037/a0020747</a>.</p>
+<p>Ratcliff, Roger. 1979. “Group Reaction Time Distributions and an Analysis of Distribution Statistics.” <em>Psychological Bulletin</em> 86 (3): 446–61. <a href="https://doi.org/10.1037/0033-2909.86.3.446" class="uri">https://doi.org/10.1037/0033-2909.86.3.446</a>.</p>
+<p>Spieler, Daniel H., David A. Balota, and Mark E. Faust. 2000. “Levels of Selective Attention Revealed Through Analyses of Response Time Distributions.” <em>Journal of Experimental Psychology: Human Perception and Performance</em> 26 (2): 506–26. <a href="https://doi.org/10.1037/0096-1523.26.2.506" class="uri">https://doi.org/10.1037/0096-1523.26.2.506</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Simon R. Steinkamp</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

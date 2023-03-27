@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.290">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Simon R. Steinkamp">
+<meta name="dcterms.date" content="2020-07-03">
+
+<title>srsteinkamp.github.io - 30th place solution in Kaggle</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">srsteinkamp.github.io</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../posters.html" rel="" target="">
+ <span class="menu-text">Posters</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../blog/2020-04-28-Pandas-GroupBy-NaN.html">Blog</a></li><li class="breadcrumb-item"><a href="../blog/2020-07-03-The-30th-Place-Solution.html">30th place solution in Kaggle</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">30th place solution in Kaggle</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Kaggle</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Simon R. Steinkamp </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 3, 2020</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Blog</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2020-04-28-Pandas-GroupBy-NaN.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Pandas suprise - NaNs and with groupby</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2020-07-03-The-30th-Place-Solution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">30th place solution in Kaggle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2020-04-03-HIDA-datathon/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HIDA-Datathon in April</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reaction Time Analysis: The exponential Gaussian</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog/2021-05-21-Analytics-Capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Analytics Capstone</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="th-place-solution-in-kaggle" class="level1">
+<h1>30th place solution in Kaggle</h1>
+<p>This post is also available in the <a href="https://www.kaggle.com/c/trends-assessment-prediction/discussion/163744">Kaggle forums</a>.</p>
+<p>First of all thanks to the organizers to putting together this challenging and interesting competition!</p>
+<p>I’ve seen many good and well written and well developed solutions on the challenge … mine is neither. But I just wanted chip in, as I might have used some feature engineering that hasn’t been used as widely. Unfortunately I don’t have the time right now to dig into it in detail, but will just give you a rough description about what I did.</p>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<p>A personal note on how I perceived the challenge. I was really exciting to see this challenge, this should lie in my area of expertise, so why not give it a try. So I did, wrote a for my terms successful EDA notebook, got into the data and somehow got to 13th place. But, as people noted, there was not much going on in terms of discussion etc., so I might have gotten a bit complacent with my position and did not develop much further. Also I might have gotten a bit annoyed, because I couldn’t get my errors on <code>domain1_var1</code> and the <code>domain2</code> vars done as much as I liked.</p>
+<p>Then life happened, vacation, deadlines, an online hackathon. Not much space for the challenge, and suddenly there are 10 days left, I have a deadline coming up, and find myself around place 50th on the leaderboard. So some panic sets in and also some craziness, so I rewrote the analysis, and preprocessing from scratch, run all the different models. Stack them up and well suddenly it’s place 34, and 30 on the private leaderboard - my best competition so far.</p>
+</section>
+<section id="preprocessing-and-features" class="level2">
+<h2 class="anchored" data-anchor-id="preprocessing-and-features">Preprocessing and Features</h2>
+<section id="targets" class="level3">
+<h3 class="anchored" data-anchor-id="targets">Targets</h3>
+<ol type="1">
+<li>I decided to perform stratified cross-validation on my data, so I used <code>KNN(n_clusters=15)</code> on the target variables, setting the missing values to 0, so that this will be taken into account for the stratification approach.</li>
+<li>Then I imputed the missing data using <code>sklearn.impute.IterativeImputer</code> to get values there. This seemed to be a good balance for me between discarding the data or just filling in a constant. However, I didn’t really look into the imputations afterwards…</li>
+</ol>
+</section>
+<section id="preprocessing-and-feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="preprocessing-and-feature-engineering">Preprocessing and Feature Engineering</h3>
+<ul>
+<li><code>loading.csv</code> - Discarded <code>IC_20</code> - Seemed to be very different between train and test (discussions and kernels)</li>
+<li><code>fnc.csv</code> - Reordering the data for use with <code>nilearn.connectome.vec_to_sym_matrix</code></li>
+<li>Extracting data from the 4D feature maps. I have a kernel out-there showing how this can be done using different <code>Masker</code> objects using <code>nilearn.input_data</code>. I extracted the sets <code>schaeffer</code> (400 brain regions), <code>msdl</code>, and <code>basc</code> (197 regions) here.</li>
+<li>Graph-based features: Several publications also focus on using graph-theory based descriptions of functional connectivity as features for machine learning classifiers. So I used the “Brain Connectivity Toolbox”, <code>bct.py</code> to derive features. These were just a ton of global and local descriptions, also at different thresholdings of the connectivity matrices (derived from <code>fnc</code>). Around 1700 features in total (with sometimes really bad numerical issues), which I somehow hacked away in the preprocessing before my stacking data. This will be named <code>fnc_graph</code>.</li>
+<li>Combined data, I also created the set <code>loadfnc</code>, combining <code>fnc</code> and <code>loading</code> data, and <code>loadmsdl</code> combining <code>msdl</code> and <code>loading</code>. Finally, I also used a <code>loadnoise</code> set, where I added some random intercept and Gaussian noise to the <code>loading</code> data (differently for each subset). If that helped at all, I couldn’t unfortunately test.</li>
+</ul>
+</section>
+</section>
+<section id="stacking-stacking-stacking" class="level2">
+<h2 class="anchored" data-anchor-id="stacking-stacking-stacking">Stacking, stacking, stacking</h2>
+<p>I stacked tons of models (32 for each feature) using different regression approaches, and sometimes different preprocessing. <code>ConnectivityMeasure</code> (shortened to <code>CM</code>). is a class from <code>nilearn.connectome</code>, that can be used to transform a <code>n x t</code> matrix in to a <code>n x n</code> connectivity matrix, using differnt kinds of connectivity. The nice thing is, it also fits into sklearn-pipelines as a vectorized version of the matrix is possible.</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 41%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Set</th>
+<th>Preprocessing SVR, LGBM</th>
+<th>Preprocessing Regression</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>basc</code></td>
+<td>CM(tangent), PCA(whiten=True), RobustScaler()</td>
+<td>CM(correlation), PCA(whiten=True)</td>
+</tr>
+<tr class="even">
+<td><code>msdl</code></td>
+<td>CM(tangent), PCA(whiten=True), RobustScaler()</td>
+<td>CM(correlation), PCA(whiten=True)</td>
+</tr>
+<tr class="odd">
+<td><code>schaeffer</code></td>
+<td>CM(tangent), PCA(whiten=True), RobustScaler()</td>
+<td>CM(correlation), PCA(whiten=True)</td>
+</tr>
+<tr class="even">
+<td><code>fnc</code></td>
+<td>PCA(whiten=True)</td>
+<td>abs(fnc) &lt; 0.15 = 0, PCA(whiten=True)</td>
+</tr>
+<tr class="odd">
+<td><code>fnc_pca</code></td>
+<td>None</td>
+<td>abs(fnc) &lt; 0.15 = 0, None</td>
+</tr>
+<tr class="even">
+<td><code>loading</code></td>
+<td>RobustScaler()</td>
+<td>RobustScaler()</td>
+</tr>
+<tr class="odd">
+<td><code>fnc_graph</code></td>
+<td>Numerical fixes, PCA(whiten=True), RobustScaler()</td>
+<td>Numerical fixes, PCA(whiten=True), RobustScaler()</td>
+</tr>
+<tr class="even">
+<td><code>loadmsdl</code></td>
+<td>PCA(whiten=True), RobustScaler()</td>
+<td>PCA(whiten=True), RobustScaler()</td>
+</tr>
+<tr class="odd">
+<td><code>loadfnc</code></td>
+<td>RobustScaler()</td>
+<td>RoubstScaler()</td>
+</tr>
+<tr class="even">
+<td><code>loadnoise</code></td>
+<td>RobustScaler()</td>
+<td>RobustScaler()</td>
+</tr>
+</tbody>
+</table>
+<section id="svr" class="level3">
+<h3 class="anchored" data-anchor-id="svr">SVR</h3>
+<p>I used sklearns <code>SVR</code> using both a linear and a rbf kernel on the datasets <code>basc</code>, <code>msdl</code>, <code>schaeffer</code>, <code>fnc_pca</code>, <code>loading</code>, and <code>fnc_graph</code>. To figure out the best parameters I applied <code>skopt.BayesianSearchCV</code> with 35 iterations (objective mean absolute error). Parameters optimized where <code>C</code>, <code>epsilon</code> and <code>n_components</code> for PCAs.</p>
+<p>So here are 2 x 6 = 12 models.</p>
+</section>
+<section id="regression" class="level3">
+<h3 class="anchored" data-anchor-id="regression">Regression</h3>
+<p>In this competition I somehow came to like the <code>LassoLars</code> regression of sklearn. So that’s what I am using here. The feature selection of it seemed to help actually. Running models on <code>basc</code>, <code>msdl</code>, <code>schaeffer</code>, <code>fnc</code>, <code>loading</code>, <code>fnc_graph</code>, <code>loadmsdl</code>, <code>loadfnc</code>, and <code>loadnoise</code>. This time optimizing mean squared error using <code>BayesianSearchCV</code> for <code>alpha</code> and <code>n_components</code>.</p>
+<p>So 9 models.</p>
+</section>
+<section id="lightgbm" class="level3">
+<h3 class="anchored" data-anchor-id="lightgbm">LightGBM</h3>
+<p>Same datasets as for <code>Regression</code>. Optimizing tree parameters and PCA, best model defined by mean absolute error.</p>
+<p>Another 9 models.</p>
+</section>
+<section id="d-cnn" class="level3">
+<h3 class="anchored" data-anchor-id="d-cnn">2D CNN</h3>
+<p>I also tried to get some more spatial information into the model as well so I set up a small 2D CNN having:</p>
+<ul>
+<li>Conv2D Layer, with ReLU activation</li>
+<li>Maxpooling (2, 2)</li>
+<li>Flatten</li>
+<li>Dropout()</li>
+<li>Dense(1)</li>
+</ul>
+<p>Where the number of <code>filters</code>, <code>kernel_size</code>, <code>Dropout</code>, <code>learning_rate</code>, and the <code>loss</code> (mae, mse), where found through <code>BayesianSearchCV</code>.</p>
+</section>
+</section>
+<section id="training-and-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="training-and-prediction">Training and Prediction</h2>
+<p>I used the same approach for all models and the final stacking model:</p>
+<ol type="1">
+<li>Optimize hyperparameters on 5-Folds.</li>
+<li>Retrain model on CV-Data</li>
+<li>Evaluate on hold-out set</li>
+<li>Retrain on all data</li>
+<li>Predict on test set.</li>
+</ol>
+<p>The final stacking model was again a <code>LassoLars</code> regression, on the outputs of the 31 models. I actually preprocessed the predictions, by slapping a <code>RobustScaler</code> in just for good measure.</p>
+</section>
+<section id="thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="thoughts">Thoughts</h2>
+<p>I learned quite a lot from the competition, but have to say that I am not really satisfied with what I did (my best competition so far…), and see a lot of room for improvement.</p>
+<section id="work-smarter" class="level3">
+<h3 class="anchored" data-anchor-id="work-smarter">Work smarter</h3>
+<p>I think the most annoying part for me is, that I just stacked tons of models. In the end not even thinking much about <em>why</em> I am doing it. I just wanted to get that 0.001 Leaderboard boost, to get a little edge. But, if I had invested my time more into careful tuning, preprocessing, and careful model selection, I think I would have gotten more out in the last weekend of the competition, than I did here. In the end, I was mostly waiting for models to finish running and to start the next set of long calculations.</p>
+</section>
+<section id="evaluate-evaluate-evaluate" class="level3">
+<h3 class="anchored" data-anchor-id="evaluate-evaluate-evaluate">Evaluate, evaluate, evaluate</h3>
+<p>So far, my intuition on evaluating locally and avoiding overfitting got me quite far (I got my first silver medal basically because of an incredibly heavy shake up of the leaderboard, pushing me a couple of 100 places or so to the top). Here I think I was actually quite lucky - see the forum posts where people discuss about the lack of a shake up.</p>
+</section>
+<section id="get-a-team" class="level3">
+<h3 class="anchored" data-anchor-id="get-a-team">Get a team</h3>
+<p>Next time I am in this situation, I think I will team up. Also I apologize to the people who contacted me and I didn’t get back to. Here it was mostly bad timing, but I think there is some much to gain in terms of insights, when you can discuss your solutions :)</p>
+<p>And of course much more.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Simon R. Steinkamp</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
