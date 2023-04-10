@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog.html</loc>
-    <lastmod>2023-03-27T18:15:44.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/about.html</loc>
-    <lastmod>2023-03-27T18:15:45.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters.html</loc>
-    <lastmod>2023-03-27T18:15:46.130Z</lastmod>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/index.html</loc>
+    <lastmod>2023-04-10T16:21:33.161Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters/2022-08-25-CCN.html</loc>
-    <lastmod>2023-03-27T18:15:46.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/index.html</loc>
-    <lastmod>2023-03-27T18:15:46.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2023-03-27-QuartoWebpage/index.html</loc>
-    <lastmod>2023-03-27T18:15:47.298Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-28-Pandas-GroupBy-NaN.html</loc>
-    <lastmod>2023-03-27T18:15:47.698Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html</loc>
-    <lastmod>2023-03-27T18:15:48.250Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-03-HIDA-datathon/index.html</loc>
-    <lastmod>2023-03-27T18:15:48.638Z</lastmod>
+    <lastmod>2023-04-10T16:21:35.621Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-05-21-Analytics-Capstone/index.html</loc>
-    <lastmod>2023-03-27T18:15:48.990Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-07-03-The-30th-Place-Solution.html</loc>
-    <lastmod>2023-03-27T18:15:49.462Z</lastmod>
+    <lastmod>2023-04-10T16:21:36.081Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-03-19-Covid19-Dashboard/index.html</loc>
-    <lastmod>2023-03-27T18:15:49.874Z</lastmod>
+    <lastmod>2023-04-10T16:21:36.573Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-03-HIDA-datathon/index.html</loc>
+    <lastmod>2023-04-10T16:21:37.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html</loc>
+    <lastmod>2023-04-10T16:21:37.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-07-03-The-30th-Place-Solution.html</loc>
+    <lastmod>2023-04-10T16:21:38.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-28-Pandas-GroupBy-NaN.html</loc>
+    <lastmod>2023-04-10T16:21:38.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2023-03-27-QuartoWebpage/index.html</loc>
+    <lastmod>2023-04-10T16:21:39.277Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/publications.html</loc>
-    <lastmod>2023-03-27T18:15:50.218Z</lastmod>
+    <lastmod>2023-04-10T16:21:39.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters.html</loc>
+    <lastmod>2023-04-10T16:21:40.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog.html</loc>
+    <lastmod>2023-04-10T16:21:40.665Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/about.html</loc>
+    <lastmod>2023-04-10T16:21:41.141Z</lastmod>
   </url>
 </urlset>
