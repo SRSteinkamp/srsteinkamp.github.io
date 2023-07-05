@@ -2,6 +2,11 @@
 title: "Posters"
 ---
 
+## Organization for Human Brain Mapping Annual Meeting 2023
+
+In this [poster](/posters/2023-07-21-OHBM.qmd), we present a first application of Computational Parametric Mapping to real data.
+
+
 ## Conference on Cognitive Computational Neuroscience
 
 In this [poster](/posters/2022-08-25-CCN.qmd), we present our first examples of Computational Parametric Mapping.
