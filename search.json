@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Welcome to my blog",
-    "section": "",
-    "text": "Here you’ll find some info on my blog etc.\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a Quarto Webpage\n\n\n\nMeta\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMar 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Analytics Capstone\n\n\n\nR\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMay 21, 2021\n\n\n\n\n\n\n\n\n\n\n\n\nA Covid-19 Dashboard (for Denmark) using Dash and Plotly\n\n\n\nPython\n\n\nPlotly\n\n\nDash\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMar 19, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n30th place solution in Kaggle\n\n\n\nPython\n\n\nKaggle\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nJul 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHIDA-Datathon in April\n\n\n\nPython\n\n\nHIDA\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nApr 30, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nReaction Time Analysis: The exponential Gaussian\n\n\n\nReaction Times\n\n\nModeling\n\n\nR\n\n\n\nReaction time analysis, using an Exgaus.\n\n\n\nSimon R. Steinkamp\n\n\nApr 30, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nA Pandas surprise - NaNs with groupby\n\n\n\nPython\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nApr 28, 2020\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Since August 2021 I am a Postdoc in the Computational Neuroscience of Reward group at the Danish Research Center for Magnetic Resonance (DRCMR), where we are investigating whether and how the principles of Ergodicity Economics (it’s fascinating, check it out: https://ergodicityeconomics.com/) apply to human decision-making.\nThe project is not only behavioral, as we are also investigating, whether these principles can be found in the reinforcement error signals in the human reward system (e.g., in ensembles of dopamine neurons). In doing this, we developed a new method for mapping parameters of computational models onto single voxels (see the poster).\nMy doctorate research was on the computational modeling of visual attention, most of it using neuroimaging (fMRI) in combination with dynamic causal modeling (DCM). During my masters I also used electrophysiological measures (EEG) for speech recovery, in combination with fMRI recordings.\nDuring my master’s degree I also started developing and coding in Python, Matlab, and R and started out on Kaggle, as well as different scientific hackathons on neuroimaging and climate change."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Welcome to my blog",
+    "section": "",
+    "text": "Here you’ll find some info on my blog etc.\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a Quarto Webpage\n\n\n\nMeta\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMar 27, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Analytics Capstone\n\n\n\nR\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMay 21, 2021\n\n\n\n\n\n\n\n\n\n\n\n\nA Covid-19 Dashboard (for Denmark) using Dash and Plotly\n\n\n\nPython\n\n\nPlotly\n\n\nDash\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nMar 19, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n30th place solution in Kaggle\n\n\n\nPython\n\n\nKaggle\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nJul 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nReaction Time Analysis: The exponential Gaussian\n\n\n\nReaction Times\n\n\nModeling\n\n\nR\n\n\n\nReaction time analysis, using an Exgaus.\n\n\n\nSimon R. Steinkamp\n\n\nApr 30, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHIDA-Datathon in April\n\n\n\nPython\n\n\nHIDA\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nApr 30, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nA Pandas surprise - NaNs with groupby\n\n\n\nPython\n\n\n\n\n\n\n\nSimon R. Steinkamp\n\n\nApr 28, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2020-04-03-HIDA-datathon/index.html",
+    "href": "blog/2020-04-03-HIDA-datathon/index.html",
+    "title": "HIDA-Datathon in April",
+    "section": "",
+    "text": "02-03 April 2020 HIDA-datathon\n\nThis remote/online 36h datathon was organized by the Helmholtz Information & Data Science Academy, inplace of the big datathon: Grand Challenges on Climate Change, which couldn’t take place due to the coronavirus.\nThis was a very interesting experience, participating in a challenge to analyze and find structure in previously unknown dataformats (especially map information) and fields (geo/climate science). After the challenge was stated, we realized that there were a couple of teams who had really concrete ideas as how to analyze the data and what kind of computational models to use.\nOur team agnostic decided that not assuming anything in particular would be the best approach, and using our very different background and levels of expertise, we were able to put together a good summary of the data at hand. Deciding to throw many conventions out of the window, we also found out some things that were surprising to the domain experts, for example that longitudinal data (even in summary chunks) provides valuable information for modeling aspects."
   },
   {
     "objectID": "blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html",
@@ -70,20 +77,6 @@
     "text": "References\nMiller, Jeff. 1988. “A Warning About Median Reaction Time.” Journal of Experimental Psychology: Human Perception and Performance 14 (3): 539–43. https://doi.org/10.1037/0096-1523.14.3.539.\nPalmer, Evan M., Todd S. Horowitz, Antonio Torralba, and Jeremy M. Wolfe. 2011. “What Are the Shapes of Response Time Distributions in Visual Search?” Journal of Experimental Psychology: Human Perception and Performance 37 (1): 58–71. https://doi.org/10.1037/a0020747.\nRatcliff, Roger. 1979. “Group Reaction Time Distributions and an Analysis of Distribution Statistics.” Psychological Bulletin 86 (3): 446–61. https://doi.org/10.1037/0033-2909.86.3.446.\nSpieler, Daniel H., David A. Balota, and Mark E. Faust. 2000. “Levels of Selective Attention Revealed Through Analyses of Response Time Distributions.” Journal of Experimental Psychology: Human Perception and Performance 26 (2): 506–26. https://doi.org/10.1037/0096-1523.26.2.506."
   },
   {
-    "objectID": "blog/2023-03-27-QuartoWebpage/index.html",
-    "href": "blog/2023-03-27-QuartoWebpage/index.html",
-    "title": "Building a Quarto Webpage",
-    "section": "",
-    "text": "I now changed my whole blog and website workflow over to Quarto and so far it’s great and surprisingly easy: I could move my previous website and blog, which resided in two different GitHub repositories - there was a reason! - into one and had everything around set up in a few hours.\nRather than writing another tutorial on how to set up a website like this, I simply want to thank Samantha Csik who wrote two excellent tutorials on creating a website, and setting up a blog.\nQuarto of course has additional important information, e.g., for configuring GitHub Actions for publishing on GitHub pages.\n\n\nI still might find a few additional tips and tricks, which I will try to write down.\n\n\nSimilar to setting up a listings page for the blog part of the website, it is also possible to highlight single items on other sites of the webpage.\nHere, for example, I am adding the most recent blog post to my index page, by adding the snippet below to the header.\nlisting:\n    contents: blog\n    type: grid\n    sort: \"date desc\"\n    categories: false\n    max-items: 1\n    grid-columns: 1\n    grid-item-align: center\n\n\n\nJust for people who are as confused as me - if you use the GitHub Actions workflow detailed in the Quarto tutorial, make sure that your GitHub pages uses Deploy from a branch as a source, using the root directory of gh-pages - and not GitHub actions :)"
-  },
-  {
-    "objectID": "blog/2023-03-27-QuartoWebpage/index.html#tips-tricks",
-    "href": "blog/2023-03-27-QuartoWebpage/index.html#tips-tricks",
-    "title": "Building a Quarto Webpage",
-    "section": "",
-    "text": "I still might find a few additional tips and tricks, which I will try to write down.\n\n\nSimilar to setting up a listings page for the blog part of the website, it is also possible to highlight single items on other sites of the webpage.\nHere, for example, I am adding the most recent blog post to my index page, by adding the snippet below to the header.\nlisting:\n    contents: blog\n    type: grid\n    sort: \"date desc\"\n    categories: false\n    max-items: 1\n    grid-columns: 1\n    grid-item-align: center\n\n\n\nJust for people who are as confused as me - if you use the GitHub Actions workflow detailed in the Quarto tutorial, make sure that your GitHub pages uses Deploy from a branch as a source, using the root directory of gh-pages - and not GitHub actions :)"
-  },
-  {
     "objectID": "blog/2021-03-19-Covid19-Dashboard/index.html",
     "href": "blog/2021-03-19-Covid19-Dashboard/index.html",
     "title": "A Covid-19 Dashboard (for Denmark) using Dash and Plotly",
@@ -119,11 +112,25 @@
     "text": "The Dashboard\nThe Dashboard itself is a basic line-plot (or a collection of line-plots). To keep the traffic as low as possible, I decided, to leave the update button from the code-along capstone next to the date-range picker and the selection of communes in Denmark. In fact, clicking update requests the data and downloads it into the html file.\nI here decided to store the data as an invisible json in the page itself, which was provided as a possible solution in the dash-documentation.\nThis ways the updates to the plot using the radio-buttons does not need to download new data and can do the computations, without constantly querying the database.\n\n\n\nDashboard overview.\n\n\nTo see the dashboards source code please visit: https://github.com/SRSteinkamp/DK_Covid19_Dash"
   },
   {
+    "objectID": "blog/2023-03-27-QuartoWebpage/index.html",
+    "href": "blog/2023-03-27-QuartoWebpage/index.html",
+    "title": "Building a Quarto Webpage",
+    "section": "",
+    "text": "I now changed my whole blog and website workflow over to Quarto and so far it’s great and surprisingly easy: I could move my previous website and blog, which resided in two different GitHub repositories - there was a reason! - into one and had everything around set up in a few hours.\nRather than writing another tutorial on how to set up a website like this, I simply want to thank Samantha Csik who wrote two excellent tutorials on creating a website, and setting up a blog.\nQuarto of course has additional important information, e.g., for configuring GitHub Actions for publishing on GitHub pages.\n\n\nI still might find a few additional tips and tricks, which I will try to write down.\n\n\nSimilar to setting up a listings page for the blog part of the website, it is also possible to highlight single items on other sites of the webpage.\nHere, for example, I am adding the most recent blog post to my index page, by adding the snippet below to the header.\nlisting:\n    contents: blog\n    type: grid\n    sort: \"date desc\"\n    categories: false\n    max-items: 1\n    grid-columns: 1\n    grid-item-align: center\n\n\n\nJust for people who are as confused as me - if you use the GitHub Actions workflow detailed in the Quarto tutorial, make sure that your GitHub pages uses Deploy from a branch as a source, using the root directory of gh-pages - and not GitHub actions :)"
+  },
+  {
+    "objectID": "blog/2023-03-27-QuartoWebpage/index.html#tips-tricks",
+    "href": "blog/2023-03-27-QuartoWebpage/index.html#tips-tricks",
+    "title": "Building a Quarto Webpage",
+    "section": "",
+    "text": "I still might find a few additional tips and tricks, which I will try to write down.\n\n\nSimilar to setting up a listings page for the blog part of the website, it is also possible to highlight single items on other sites of the webpage.\nHere, for example, I am adding the most recent blog post to my index page, by adding the snippet below to the header.\nlisting:\n    contents: blog\n    type: grid\n    sort: \"date desc\"\n    categories: false\n    max-items: 1\n    grid-columns: 1\n    grid-item-align: center\n\n\n\nJust for people who are as confused as me - if you use the GitHub Actions workflow detailed in the Quarto tutorial, make sure that your GitHub pages uses Deploy from a branch as a source, using the root directory of gh-pages - and not GitHub actions :)"
+  },
+  {
     "objectID": "posters/2023-07-21-OHBM.html",
     "href": "posters/2023-07-21-OHBM.html",
     "title": "Organization for Human Brain Mapping, Annual Meeting 2023",
     "section": "",
-    "text": "The poster presented at OHBM 2023 will appear here soon."
+    "text": "Here is our poster on Computational Parametric Mapping (CPM), presented at OHBM 2023.\n\n\n\nThis browser does not support PDFs. Please download the PDF to view it: Download PDF."
   },
   {
     "objectID": "index.html",
@@ -147,27 +154,6 @@
     "text": "Projects\nHere are a few projects of mine I want to highlight, please see their respective GitHub pages.\n\npymtrf\nMy first “full-blown” project. For a presentation I decided to translate the MTRF-toolbox for Matlab to Python and unleash the fullstack of continuous integration and testing suits on it.\nLink to the Github Repro\n\n\nMaskbinarizer\nCurrently I am using nbdev for developing, especially due to the easy creation of documentations. This is a very basic command line tool, to binarize NIFTI files: The last time I checked mricron outputs brain masks in RGB, while a popular lesion symptom mapping tool expects binary images.\nLink to Docs\nLink to Repro"
   },
   {
-    "objectID": "posters.html",
-    "href": "posters.html",
-    "title": "Posters",
-    "section": "",
-    "text": "In this poster, we present a first application of Computational Parametric Mapping to real data."
-  },
-  {
-    "objectID": "posters.html#organization-for-human-brain-mapping-annual-meeting-2023",
-    "href": "posters.html#organization-for-human-brain-mapping-annual-meeting-2023",
-    "title": "Posters",
-    "section": "",
-    "text": "In this poster, we present a first application of Computational Parametric Mapping to real data."
-  },
-  {
-    "objectID": "posters.html#conference-on-cognitive-computational-neuroscience",
-    "href": "posters.html#conference-on-cognitive-computational-neuroscience",
-    "title": "Posters",
-    "section": "Conference on Cognitive Computational Neuroscience",
-    "text": "Conference on Cognitive Computational Neuroscience\nIn this poster, we present our first examples of Computational Parametric Mapping."
-  },
-  {
     "objectID": "posters/2022-08-25-CCN.html",
     "href": "posters/2022-08-25-CCN.html",
     "title": "Conference on Cognitive Computational Neuroscience 2022",
@@ -180,13 +166,6 @@
     "title": "A Pandas surprise - NaNs with groupby",
     "section": "",
     "text": "A Pandas surprise - NaNs and groupby\n\nimport pandas as pd\nimport numpy as np\nfrom pandas.errors import UnsupportedFunctionCall\n\nI figured out something about pandas today, which I was very surprised by. Applying .groupby on a pd.DataFrame automatically ignores NaN values. This is intended behavior, but sometimes you actually want to have some NaN in the data, to check whether your data-frame is correct and to find possible corruptions.\nHere is a little example:\n\n# Create a sample Array:\nDF = pd.DataFrame.from_dict({'g1': ['a', 'a', 'a', 'a', 'b', 'b', 'b', 'b'], \n                             'g2': ['c', 'c', 'd', 'd', 'c', 'c', 'd', 'd'],\n                             'd1': [0, 1, np.nan, 3, 4, 5, 6, 7]})\n\nAveraging the entries in DF, we would expect a NaN in group a, d, but we get 3.0!\n\nDF.groupby(['g1', 'g2']).mean()\n\nIf you apply pandas .mean() method on a DataFrame you could specify a skipna = False in the function. This, unfortunately doesn’t work after using .groupby.\n\n# This creates an error\ntry:\n    DF.groupby(['g1', 'g2']).mean(skipna=False)\nexcept UnsupportedFunctionCall:\n    print('UnsupportedFunctionCall')\n\nI think, I have seen one solution to solve this issue stating that using .apply(np.mean) instead of using .mean() might solve the problem.\nHowever:\n\nDF.groupby(['g1', 'g2']).apply(np.mean)\n\nCalling np.mean causes pandas to bypass the function and calls DF.mean() from pandas with skipna=True! As far as I know, you have to create a new function to solve the issue.\n\ndef mean_w_nan(x):\n    # Don't forget the np.array call!\n    return np.mean(np.array(x))\n\nDF.groupby(['g1', 'g2']).apply(mean_w_nan)\n\n\n\nReferences:\n\nhttps://stackoverflow.com/questions/26145585/pandas-aggregation-ignoring-nans\nhttps://github.com/pandas-dev/pandas/issues/15674\nhttps://stackoverflow.com/questions/54106112/pandas-groupby-mean-not-ignoring-nans"
-  },
-  {
-    "objectID": "blog/2020-04-03-HIDA-datathon/index.html",
-    "href": "blog/2020-04-03-HIDA-datathon/index.html",
-    "title": "HIDA-Datathon in April",
-    "section": "",
-    "text": "02-03 April 2020 HIDA-datathon\n\nThis remote/online 36h datathon was organized by the Helmholtz Information & Data Science Academy, inplace of the big datathon: Grand Challenges on Climate Change, which couldn’t take place due to the coronavirus.\nThis was a very interesting experience, participating in a challenge to analyze and find structure in previously unknown dataformats (especially map information) and fields (geo/climate science). After the challenge was stated, we realized that there were a couple of teams who had really concrete ideas as how to analyze the data and what kind of computational models to use.\nOur team agnostic decided that not assuming anything in particular would be the best approach, and using our very different background and levels of expertise, we were able to put together a good summary of the data at hand. Deciding to throw many conventions out of the window, we also found out some things that were surprising to the domain experts, for example that longitudinal data (even in summary chunks) provides valuable information for modeling aspects."
   },
   {
     "objectID": "blog/2021-05-21-Analytics-Capstone/index.html",
@@ -243,5 +222,26 @@
     "title": "Publications",
     "section": "",
     "text": "Steinkamp, S. R., Fink, G. R., Vossel, S., & Weidner, R. 2021. Simultaneous Modeling of Reaction Times and Brain Dynamics in a Spatial Cueing Task, Human Brain Mapping 25758; https:\\doi.org/10.1002/hbm.25758\nSteinkamp, S. R., Vossel, S., Fink, G. R., & Weidner, R. 2020. Attentional reorientation along the meridians of the visual field: Are there different neural mechanisms at play? Human Brain Mapping, 25086. https://doi.org/10.1002/hbm.25086\nBotvinik-Nezer, R., Holzmeister, F., Camerer, C. F., Dreber, A., Huber, J., Johannesson, M., … Steinkamp, S. R. … Schonberg, T. 2020. Variability in the analysis of a single neuroimaging dataset by many teams. Nature. https://doi.org/10.1038/s41586-020-2314-9\nPuschmann, S., Steinkamp, S., Gillich, I., Mirkovic, B., Debener, S., & Thiel, C. M. 2017. The Right Temporoparietal Junction Supports Speech Tracking During Selective Listening: Evidence from Concurrent EEG-fMRI. The Journal of Neuroscience, 37(47), 11505. https://doi.org/10.1523/JNEUROSCI.1007-17.2017"
+  },
+  {
+    "objectID": "posters.html",
+    "href": "posters.html",
+    "title": "Posters",
+    "section": "",
+    "text": "In this poster, we present a first application of Computational Parametric Mapping to real data."
+  },
+  {
+    "objectID": "posters.html#organization-for-human-brain-mapping-annual-meeting-2023",
+    "href": "posters.html#organization-for-human-brain-mapping-annual-meeting-2023",
+    "title": "Posters",
+    "section": "",
+    "text": "In this poster, we present a first application of Computational Parametric Mapping to real data."
+  },
+  {
+    "objectID": "posters.html#conference-on-cognitive-computational-neuroscience",
+    "href": "posters.html#conference-on-cognitive-computational-neuroscience",
+    "title": "Posters",
+    "section": "Conference on Cognitive Computational Neuroscience",
+    "text": "Conference on Cognitive Computational Neuroscience\nIn this poster, we present our first examples of Computational Parametric Mapping."
   }
 ]
