@@ -2,4 +2,8 @@
 title: "Organization for Human Brain Mapping, Annual Meeting 2023"
 ---
 
-The poster presented at OHBM 2023 will appear here soon.
+<object data="/www/Steinkamp_OHBM_2023_vert.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/www/Steinkamp_OHBM_2023_vert.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_OHBM_2023_vert.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
