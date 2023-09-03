@@ -7,4 +7,4 @@ listing:
   categories: true # allows you to sort posts by assigned categories
 ---
 
-Here you'll find some info on my blog etc.
+Welcome to my blog!

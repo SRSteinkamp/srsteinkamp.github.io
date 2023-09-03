@@ -8,6 +8,9 @@ Since August 2021 I am a Postdoc in the [Computational Neuroscience of Reward](h
 The project is not only behavioral, as we are also investigating, whether these principles can be found in the reinforcement error signals in the human reward system (e.g., in ensembles of dopamine neurons). In doing this, we
 developed a new method for mapping parameters of computational models onto single voxels (see the [poster](/posters/2022-08-25-CCN.qmd)).
 
+Starting in August 2023, I am further developing my own research, for which I was awarded a Postdoc grant by the Lundbeck foundation on mapping the reward
+system. For a description see the press release [here](https://lundbeckfonden.com/en/does-cognition-use-a-common-reward-map-an-fmri-study-of-reward-across-multiple-cognitive-tasks).
+
 My doctorate research was on the computational modeling of visual attention, most of it using neuroimaging (fMRI) in combination with dynamic causal modeling (DCM). During my masters I also used electrophysiological measures (EEG) for speech recovery, in combination with fMRI recordings.
 
 During my master's degree I also started developing and coding in Python, Matlab, and R and started out on Kaggle, as well as different scientific hackathons on neuroimaging and climate change.

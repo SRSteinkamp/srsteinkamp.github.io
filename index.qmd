@@ -27,9 +27,8 @@ listing:
     grid-item-align: center
 ---
 
-***Construction warning:*** *I previously used a mixture of academic pages and nbpages for my blog and
-the other content - currently migrating to a single Quarto page - a few things might
-break or change.*
+I previously used a mixture of academic pages and nbpages for my blog and other content, and switched
+to quarto a while ago, so there's still some development here.
 
 ## Welcome
 
