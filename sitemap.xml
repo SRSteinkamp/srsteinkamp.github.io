@@ -2,58 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/about.html</loc>
-    <lastmod>2023-07-23T14:55:37.630Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog.html</loc>
-    <lastmod>2023-07-23T14:55:36.818Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-03-HIDA-datathon/index.html</loc>
-    <lastmod>2023-07-23T14:55:35.322Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html</loc>
-    <lastmod>2023-07-23T14:55:34.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-03-19-Covid19-Dashboard/index.html</loc>
-    <lastmod>2023-07-23T14:55:32.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2023-03-27-QuartoWebpage/index.html</loc>
-    <lastmod>2023-07-23T14:55:31.634Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters/2023-07-21-OHBM.html</loc>
-    <lastmod>2023-07-23T14:55:30.746Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/index.html</loc>
-    <lastmod>2023-07-23T14:55:28.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters/2022-08-25-CCN.html</loc>
-    <lastmod>2023-07-23T14:55:31.158Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-28-Pandas-GroupBy-NaN.html</loc>
-    <lastmod>2023-07-23T14:55:32.130Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-05-21-Analytics-Capstone/index.html</loc>
-    <lastmod>2023-07-23T14:55:33.082Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-07-03-The-30th-Place-Solution.html</loc>
-    <lastmod>2023-07-23T14:55:34.890Z</lastmod>
+    <lastmod>2023-09-03T17:16:45.947Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/publications.html</loc>
-    <lastmod>2023-07-23T14:55:35.710Z</lastmod>
+    <lastmod>2023-09-03T17:16:44.163Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html</loc>
+    <lastmod>2023-09-03T17:16:43.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-07-03-The-30th-Place-Solution.html</loc>
+    <lastmod>2023-09-03T17:16:41.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-03-HIDA-datathon/index.html</loc>
+    <lastmod>2023-09-03T17:16:40.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-05-21-Analytics-Capstone/index.html</loc>
+    <lastmod>2023-09-03T17:16:39.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters/2023-07-21-OHBM.html</loc>
+    <lastmod>2023-09-03T17:16:38.271Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters/2022-08-25-CCN.html</loc>
+    <lastmod>2023-09-03T17:16:35.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/index.html</loc>
+    <lastmod>2023-09-03T17:16:38.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2020-04-28-Pandas-GroupBy-NaN.html</loc>
+    <lastmod>2023-09-03T17:16:39.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2021-03-19-Covid19-Dashboard/index.html</loc>
+    <lastmod>2023-09-03T17:16:40.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog/2023-03-27-QuartoWebpage/index.html</loc>
+    <lastmod>2023-09-03T17:16:42.227Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/posters.html</loc>
-    <lastmod>2023-07-23T14:55:37.234Z</lastmod>
+    <lastmod>2023-09-03T17:16:43.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/SRSteinkamp/srsteinkamp.github.io/blog.html</loc>
+    <lastmod>2023-09-03T17:16:45.487Z</lastmod>
   </url>
 </urlset>
