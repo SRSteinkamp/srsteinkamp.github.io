@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
       "/blog/2023-03-27-QuartoWebpage/index.html",
       "/blog/2021-05-21-Analytics-Capstone/index.html",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
       "/blog/2023-03-27-QuartoWebpage/index.html",
       "/blog/2021-05-21-Analytics-Capstone/index.html",

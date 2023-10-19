@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Simon R. Steinkamp">
-<meta name="dcterms.date" content="2020-04-28">
 
-<title>SR Steinkamp - A Pandas surprise - NaNs with groupby</title>
+<title>SR Steinkamp - The Brain Conferences - Structuring Knowledge for Flexible Behaviour</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -152,45 +116,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../blog/2020-04-28-Pandas-GroupBy-NaN.html">Blog</a></li><li class="breadcrumb-item"><a href="../blog/2020-04-28-Pandas-GroupBy-NaN.html">A Pandas surprise - NaNs with groupby</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posters/2022-08-25-CCN.html">Posters</a></li><li class="breadcrumb-item"><a href="../posters/2023-10-18-FENS.html">The Brain Conferences - Structuring Knowledge for Flexible Behaviour</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">A Pandas surprise - NaNs with groupby</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Python</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Simon R. Steinkamp </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 28, 2020</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -198,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Blog</span></a>
+ <span class="menu-text">Posters</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -206,44 +139,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../blog/2020-04-28-Pandas-GroupBy-NaN.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">A Pandas surprise - NaNs with groupby</span></a>
+  <a href="../posters/2022-08-25-CCN.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conference on Cognitive Computational Neuroscience 2022</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../blog/2020-07-03-The-30th-Place-Solution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">30th place solution in Kaggle</span></a>
+  <a href="../posters/2023-07-21-OHBM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Organization for Human Brain Mapping, Annual Meeting 2023</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../blog/2020-04-03-HIDA-datathon/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HIDA-Datathon in April</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/2021-05-21-Analytics-Capstone/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Analytics Capstone</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reaction Time Analysis: The exponential Gaussian</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/2023-03-27-QuartoWebpage/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Building a Quarto Webpage</span></a>
+  <a href="../posters/2023-10-18-FENS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">The Brain Conferences - Structuring Knowledge for Flexible Behaviour</span></a>
   </div>
 </li>
       </ul>
@@ -255,62 +164,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Brain Conferences - Structuring Knowledge for Flexible Behaviour</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="a-pandas-surprise---nans-and-groupby" class="level1">
-<h1>A Pandas surprise - NaNs and groupby</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.errors <span class="im">import</span> UnsupportedFunctionCall</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>I figured out something about pandas today, which I was very surprised by. Applying <code>.groupby</code> on a <code>pd.DataFrame</code> automatically ignores <code>NaN</code> values. This is intended behavior, but sometimes you actually want to have some <code>NaN</code> in the data, to check whether your data-frame is correct and to find possible corruptions.</p>
-<p>Here is a little example:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample Array:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>DF <span class="op">=</span> pd.DataFrame.from_dict({<span class="st">'g1'</span>: [<span class="st">'a'</span>, <span class="st">'a'</span>, <span class="st">'a'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'b'</span>, <span class="st">'b'</span>, <span class="st">'b'</span>], </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                             <span class="st">'g2'</span>: [<span class="st">'c'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'d'</span>, <span class="st">'c'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'d'</span>],</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                             <span class="st">'d1'</span>: [<span class="dv">0</span>, <span class="dv">1</span>, np.nan, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Averaging the entries in <code>DF</code>, we would expect a <code>NaN</code> in group <code>a</code>, <code>d</code>, but we get <code>3.0</code>!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>DF.groupby([<span class="st">'g1'</span>, <span class="st">'g2'</span>]).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>If you apply pandas <code>.mean()</code> method on a <code>DataFrame</code> you could specify a <code>skipna = False</code> in the function. This, unfortunately doesn’t work after using <code>.groupby</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This creates an error</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    DF.groupby([<span class="st">'g1'</span>, <span class="st">'g2'</span>]).mean(skipna<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> UnsupportedFunctionCall:</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'UnsupportedFunctionCall'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>I think, I have seen one solution to solve this issue stating that using <code>.apply(np.mean)</code> instead of using <code>.mean()</code> might solve the problem.</p>
-<p>However:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>DF.groupby([<span class="st">'g1'</span>, <span class="st">'g2'</span>]).<span class="bu">apply</span>(np.mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Calling <code>np.mean</code> causes pandas to bypass the function and calls <code>DF.mean()</code> from pandas with <code>skipna=True</code>! As far as I know, you have to create a new function to solve the issue.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mean_w_nan(x):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Don't forget the np.array call!</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean(np.array(x))</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>DF.groupby([<span class="st">'g1'</span>, <span class="st">'g2'</span>]).<span class="bu">apply</span>(mean_w_nan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="references" class="level1">
-<h1>References:</h1>
-<ul>
-<li><a href="https://stackoverflow.com/questions/26145585/pandas-aggregation-ignoring-nans">https://stackoverflow.com/questions/26145585/pandas-aggregation-ignoring-nans</a></li>
-<li><a href="https://github.com/pandas-dev/pandas/issues/15674">https://github.com/pandas-dev/pandas/issues/15674</a></li>
-<li><a href="https://stackoverflow.com/questions/54106112/pandas-groupby-mean-not-ignoring-nans">https://stackoverflow.com/questions/54106112/pandas-groupby-mean-not-ignoring-nans</a></li>
-</ul>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Here is our poster on Computational Parametric Mapping (CPM), presented at The Brain Conferences - Structuring Knowledge for Flexible Behaviour 2023.</p>
+<p>The work on the toolbox is currently in active development, a small tutorial application can be found on <a href="https://github.com/ergEx/BayespRF_CPM/blob/simulation_study/cpm_tutorial.m">GitHub</a></p>
+<object data="/www/Steinkamp_FENS_2023_vert.pdf" type="application/pdf" width="750px" height="750px">
+<embed src="../www/Steinkamp_FENS_2023_vert.pdf" type="application/pdf">
+<p>
+This browser does not support PDFs. Please download the PDF to view it: <a href="../www/Steinkamp_FENS_2023_vert.pdf">Download PDF</a>.
+</p>
+
+</object>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
