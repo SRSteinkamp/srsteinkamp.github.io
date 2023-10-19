@@ -1,0 +1,13 @@
+---
+title: "The Brain Conferences - Structuring Knowledge for Flexible Behaviour"
+---
+
+Here is our poster on Computational Parametric Mapping (CPM), presented at The Brain Conferences - Structuring Knowledge for Flexible Behaviour 2023.
+
+The work on the toolbox is currently in active development, a small tutorial application can be found on [GitHub](https://github.com/ergEx/BayespRF_CPM/blob/simulation_study/cpm_tutorial.m)
+
+<object data="/www/Steinkamp_FENS_2023_vert.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/www/Steinkamp_FENS_2023_vert.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_FENS_2023_vert.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
