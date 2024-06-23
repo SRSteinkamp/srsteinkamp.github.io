@@ -11,6 +11,8 @@ developed a new method for mapping parameters of computational models onto singl
 Starting in August 2023, I am further developing my own research, for which I was awarded a Postdoc grant by the Lundbeck foundation on mapping the reward
 system. For a description see the press release [here](https://lundbeckfonden.com/en/does-cognition-use-a-common-reward-map-an-fmri-study-of-reward-across-multiple-cognitive-tasks).
 
+One project already coming out of it is the [rewardGym](https://rewardmap.github.io/rewardGym/).
+
 My doctorate research was on the computational modeling of visual attention, most of it using neuroimaging (fMRI) in combination with dynamic causal modeling (DCM). During my masters I also used electrophysiological measures (EEG) for speech recovery, in combination with fMRI recordings.
 
 During my master's degree I also started developing and coding in Python, Matlab, and R and started out on Kaggle, as well as different scientific hackathons on neuroimaging and climate change.

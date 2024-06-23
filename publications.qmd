@@ -3,10 +3,14 @@ title: "Publications"
 sidebar: false
 ---
 
-* **Steinkamp, S. R.**, Fink, G. R., Vossel, S., & Weidner, R. **2021**. Simultaneous Modeling of Reaction Times and Brain Dynamics in a Spatial Cueing Task, **Human Brain Mapping** 25758; [https:\\doi.org/10.1002/hbm.25758](https://doi.org/10.1002/hbm.25758)
+* Skjold, B., **Steinkamp, S.**, Connaughton, C., Hulme, O. J., & Peters, O. (**2024**). Ergodicity transformations predict human decision-making under risk. [https://doi.org/10.31219/osf.io/c96yd](https://doi.org/10.31219/osf.io/c96yd)
 
-* **Steinkamp, S. R.**, Vossel, S., Fink, G. R., & Weidner, R. **2020**. Attentional reorientation along the meridians of the visual field: Are there different neural mechanisms at play? **Human Brain Mapping**, 25086. [https://doi.org/10.1002/hbm.25086](https://doi.org/10.1002/hbm.25086)
+* **Steinkamp, S. R.**, Chaker, I., Hubert, F., Meder, D., & Hulme, O. (**2022**). Computational Parametric Mapping: A Method For Mapping Cognitive Models Onto Neuroimaging Data. 2022 Conference on Cognitive Computational Neuroscience. 2022 Conference on Cognitive Computational Neuroscience, San Francisco. [https://doi.org/10.32470/CCN.2022.1124-0](https://doi.org/10.32470/CCN.2022.1124-0)
 
-* Botvinik-Nezer, R., Holzmeister, F., Camerer, C. F., Dreber, A., Huber, J., Johannesson, M., ... **Steinkamp, S. R.** ... Schonberg, T. **2020**. Variability in the analysis of a single neuroimaging dataset by many teams. **Nature**. [https://doi.org/10.1038/s41586-020-2314-9](https://doi.org/10.1038/s41586-020-2314-9)
+* **Steinkamp, S. R.**, Fink, G. R., Vossel, S., & Weidner, R. (**2021**). Simultaneous Modeling of Reaction Times and Brain Dynamics in a Spatial Cueing Task, **Human Brain Mapping** 25758; [https:\\doi.org/10.1002/hbm.25758](https://doi.org/10.1002/hbm.25758)
 
-* Puschmann, S., **Steinkamp, S.**, Gillich, I., Mirkovic, B., Debener, S., & Thiel, C. M. **2017**. The Right Temporoparietal Junction Supports Speech Tracking During Selective Listening: Evidence from Concurrent EEG-fMRI. **The Journal of Neuroscience**, 37(47), 11505. [https://doi.org/10.1523/JNEUROSCI.1007-17.2017](https://doi.org/10.1523/JNEUROSCI.1007-17.2017)
+* **Steinkamp, S. R.**, Vossel, S., Fink, G. R., & Weidner, R. (**2020**). Attentional reorientation along the meridians of the visual field: Are there different neural mechanisms at play? **Human Brain Mapping**, 25086. [https://doi.org/10.1002/hbm.25086](https://doi.org/10.1002/hbm.25086)
+
+* Botvinik-Nezer, R., Holzmeister, F., Camerer, C. F., Dreber, A., Huber, J., Johannesson, M., ... **Steinkamp, S. R.** ... Schonberg, T. (**2020**). Variability in the analysis of a single neuroimaging dataset by many teams. **Nature**. [https://doi.org/10.1038/s41586-020-2314-9](https://doi.org/10.1038/s41586-020-2314-9)
+
+* Puschmann, S., **Steinkamp, S.**, Gillich, I., Mirkovic, B., Debener, S., & Thiel, C. M. (**2017**). The Right Temporoparietal Junction Supports Speech Tracking During Selective Listening: Evidence from Concurrent EEG-fMRI. **The Journal of Neuroscience**, 37(47), 11505. [https://doi.org/10.1523/JNEUROSCI.1007-17.2017](https://doi.org/10.1523/JNEUROSCI.1007-17.2017)
