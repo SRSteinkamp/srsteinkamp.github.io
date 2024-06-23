@@ -1,1 +1,1 @@
-Sitemap: https://github.com/SRSteinkamp/srsteinkamp.github.io/sitemap.xml
+Sitemap: https://SRSteinkamp.github.io/srsteinkamp.github.io/sitemap.xml

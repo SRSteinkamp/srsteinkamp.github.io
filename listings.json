@@ -1,25 +1,25 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/2023-03-27-QuartoWebpage/index.html",
-      "/blog/2021-05-21-Analytics-Capstone/index.html",
-      "/blog/2021-03-19-Covid19-Dashboard/index.html",
-      "/blog/2020-07-03-The-30th-Place-Solution.html",
-      "/blog/2020-04-03-HIDA-datathon/index.html",
-      "/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html",
-      "/blog/2020-04-28-Pandas-GroupBy-NaN.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/blog/2023-03-27-QuartoWebpage/index.html",
       "/blog/2021-05-21-Analytics-Capstone/index.html",
       "/blog/2021-03-19-Covid19-Dashboard/index.html",
       "/blog/2020-07-03-The-30th-Place-Solution.html",
-      "/blog/2020-04-03-HIDA-datathon/index.html",
       "/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html",
+      "/blog/2020-04-03-HIDA-datathon/index.html",
+      "/blog/2020-04-28-Pandas-GroupBy-NaN.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/2023-03-27-QuartoWebpage/index.html",
+      "/blog/2021-05-21-Analytics-Capstone/index.html",
+      "/blog/2021-03-19-Covid19-Dashboard/index.html",
+      "/blog/2020-07-03-The-30th-Place-Solution.html",
+      "/blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html",
+      "/blog/2020-04-03-HIDA-datathon/index.html",
       "/blog/2020-04-28-Pandas-GroupBy-NaN.html"
     ]
   }
