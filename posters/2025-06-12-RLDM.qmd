@@ -2,10 +2,10 @@
 title: "Reinforcement Learning and Decision Making 2025"
 ---
 
-Here is our poster on the rewardGym toolbox.
+Here is our poster on the rewardGym toolbox https://github.com/rewardMap/rewardGym.
 
-<object data="/www/Steinkamp_OHBM_2024.pdf" type="application/pdf" width="750px" height="750px">
-    <embed src="/www/Steinkamp_OHBM_2024.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_OHBM_2024.pdf">Download PDF</a>.</p>
+<object data="/www/Steinkamp_rewardGym_2025.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/www/Steinkamp_rewardGym_2025.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_rewardGym_2025.pdf">Download PDF</a>.</p>
     </embed>
 </object>
