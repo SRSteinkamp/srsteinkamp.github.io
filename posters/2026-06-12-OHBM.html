@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Simon R. Steinkamp">
-<meta name="dcterms.date" content="2021-03-19">
 
-<title>A Covid-19 Dashboard (for Denmark) using Dash and Plotly – SR Steinkamp</title>
+<title>Organization for Human Brain Mapping, Annual Meeting 2026 – SR Steinkamp</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,27 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06316bef04de2a3e2f707d1e6d1a4444.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-848b2aa0348113ff1ed9e9ef3922b6b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-06316bef04de2a3e2f707d1e6d1a4444.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-06316bef04de2a3e2f707d1e6d1a4444.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-848b2aa0348113ff1ed9e9ef3922b6b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-06316bef04de2a3e2f707d1e6d1a4444.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -246,11 +244,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SR Steinkamp</span>
     </a>
   </div>
@@ -260,23 +258,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posters.html"> 
+    <a class="nav-link" href="../posters.html"> 
 <span class="menu-text">Posters</span></a>
   </li>  
 </ul>
@@ -292,47 +290,14 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../blog/2020-04-28-Pandas-GroupBy-NaN.html">Blog</a></li><li class="breadcrumb-item"><a href="../../blog/2021-03-19-Covid19-Dashboard/index.html">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posters/2022-08-25-CCN.html">Posters</a></li><li class="breadcrumb-item"><a href="../posters/2026-06-12-OHBM.html">Organization for Human Brain Mapping, Annual Meeting 2026</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../blog/2020-04-28-Pandas-GroupBy-NaN.html">Blog</a></li><li class="breadcrumb-item"><a href="../../blog/2021-03-19-Covid19-Dashboard/index.html">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</a></li></ol></nav>
-      <h1 class="title">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Python</div>
-                <div class="quarto-category">Plotly</div>
-                <div class="quarto-category">Dash</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Simon R. Steinkamp </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">March 19, 2021</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -340,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Blog</span></a>
+ <span class="menu-text">Posters</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -348,44 +313,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2020-04-28-Pandas-GroupBy-NaN.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Pandas surprise - NaNs with groupby</span></a>
+  <a href="../posters/2022-08-25-CCN.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conference on Cognitive Computational Neuroscience 2022</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2020-07-03-The-30th-Place-Solution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">30th place solution in Kaggle</span></a>
+  <a href="../posters/2023-07-21-OHBM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Organization for Human Brain Mapping, Annual Meeting 2023</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2021-03-19-Covid19-Dashboard/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">A Covid-19 Dashboard (for Denmark) using Dash and Plotly</span></a>
+  <a href="../posters/2023-10-18-FENS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Brain Conferences - Structuring Knowledge for Flexible Behaviour</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2020-05-01-Reaction-Time-Analysis-Ex-Gauss/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reaction Time Analysis: The exponential Gaussian</span></a>
+  <a href="../posters/2024-06-21-OHBM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Organization for Human Brain Mapping, Annual Meeting 2023</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2020-04-03-HIDA-datathon/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HIDA-Datathon in April</span></a>
+  <a href="../posters/2025-06-12-RLDM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reinforcement Learning and Decision Making 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/2023-03-27-QuartoWebpage/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Building a Quarto Webpage</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../blog/2021-05-21-Analytics-Capstone/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Analytics Capstone</span></a>
+  <a href="../posters/2026-06-12-OHBM.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Organization for Human Brain Mapping, Annual Meeting 2026</span></a>
   </div>
 </li>
       </ul>
@@ -397,45 +356,38 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-
-<p><strong>The website presented here is currently not working - statsbank changed the API and I think my heroku has expired…</strong></p>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
-<p>I created a small dashboard for COVID-19 cases in Denmark, deployed on <a href="https://dashboard.heroku.com/">heroku</a>.</p>
-<p>Which you can see <a href="https://dk-covid19-dash.herokuapp.com/"><strong>here</strong></a></p>
-</section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>To motivate myself to learn a few new skills which might come handy in future jobs, I got a few courses on udemy as a general guidance and more structured approach to get into new topics.</p>
-<p>One of the courses was on designing interactive dashboards in Pythons using <code>plotly</code> and <code>dash</code>. As a code-along capstone they showed how to develop a dashboard for the stock-market. Now, I could not easily get the data I wanted through <code>pandas-datareader</code>, as many of the APIs now require a registration or are paid.</p>
-</section>
-<section id="the-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>As I was anyways up for a bit more of a challenge and recently moved to Denmark and was digging regularly digging through COVID-19 Dashboards (like the one at <a href="https://www.zeit.de/wissen/gesundheit/corona-zahlen-deutschland-neuinfektionen-inzidenz-aktuelle-karte">zeit.de</a>), I gave myself a try.</p>
-<p>Fortunately, Denmark provides regularly updated data on COVID-19 (and many many other topics) at <a href="statbank.dk">statbank.dk</a> all accessible via a POST API.</p>
-<p>While the data was easy accessible and could be directly read into pandas as a <code>.csv</code>, it actually had internally some interesting challenges. For example, querying dates that were not present in the database led to errors, so that I had to retrieve meta-data about the database before creating queries, so that I could filter data beforehand.</p>
-</section>
-<section id="the-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="the-dashboard">The Dashboard</h2>
-<p>The Dashboard itself is a basic line-plot (or a collection of line-plots). To keep the traffic as low as possible, I decided, to leave the <code>update</code> button from the code-along capstone next to the date-range picker and the selection of communes in Denmark. In fact, clicking update requests the data and downloads it into the <code>html</code> file.</p>
-<p>I here decided to store the data as an invisible <code>json</code> in the page itself, which was provided as a possible solution in the <a href="https://dash.plotly.com/sharing-data-between-callbacks">dash-documentation</a>.</p>
-<p>This ways the updates to the plot using the radio-buttons does not need to download new data and can do the computations, without constantly querying the database.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="covid_dash.png" class="img-fluid figure-img"></p>
-<figcaption>Dashboard overview.</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posters/2022-08-25-CCN.html">Posters</a></li><li class="breadcrumb-item"><a href="../posters/2026-06-12-OHBM.html">Organization for Human Brain Mapping, Annual Meeting 2026</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Organization for Human Brain Mapping, Annual Meeting 2026</h1>
 </div>
-<p>To see the dashboards source code please visit: <a href="https://github.com/SRSteinkamp/DK_Covid19_Dash">https://github.com/SRSteinkamp/DK_Covid19_Dash</a></p>
 
 
-</section>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Here is our poster on neural correlats of time optimal decision making.</p>
+<object data="/www/Steinkamp_OHBM_2026.pdf" type="application/pdf" width="750px" height="750px">
+<embed src="../www/Steinkamp_OHBM_2026.pdf" type="application/pdf">
+<p>
+This browser does not support PDFs. Please download the PDF to view it: <a href="../www/Steinkamp_OHBM_2026.pdf">Download PDF</a>.
+</p>
+
+</object>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
