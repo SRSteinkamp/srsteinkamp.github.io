@@ -1,0 +1,11 @@
+---
+title: "Organization for Human Brain Mapping, Annual Meeting 2026"
+---
+
+Here is our poster on neural correlats of time optimal decision making.
+
+<object data="/www/Steinkamp_OHBM_2026.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/www/Steinkamp_OHBM_2026.pdf" type="application/pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/www/Steinkamp_OHBM_2026.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
